@@ -1,0 +1,609 @@
+EESchema Schematic File Version 4
+LIBS:wemosd1mini-ssr-socket-hat-cache
+EELAYER 30 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 1 1
+Title ""
+Date ""
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L Transistor_BJT:BC547 Q1
+U 1 1 5D77B6AC
+P 6900 3850
+F 0 "Q1" H 7091 3896 50  0000 L CNN
+F 1 "BC547" H 7091 3805 50  0000 L CNN
+F 2 "Package_TO_SOT_THT:TO-92_Inline" H 7100 3775 50  0001 L CIN
+F 3 "http://www.fairchildsemi.com/ds/BC/BC547.pdf" H 6900 3850 50  0001 L CNN
+	1    6900 3850
+	1    0    0    -1  
+$EndComp
+$Comp
+L G3MB-202P:G3MB-202P K1
+U 1 1 5D788A46
+P 8100 3900
+F 0 "K1" H 8830 4003 50  0000 L CNN
+F 1 "G3MB-202P" H 8830 3912 50  0000 L CNN
+F 2 "G3MB-202P:RELAY_G3MB-202P" H 8150 3800 50  0001 L BNN
+F 3 "G3MB-202P" H 8150 3800 50  0001 L BNN
+F 4 "Omron Automation" H 8150 3800 50  0001 L BNN "Pole4"
+F 5 "SIP-4 Omron Automation" H 8150 3800 50  0001 L BNN "Pole5"
+F 6 "None" H 8150 3800 50  0001 L BNN "Pole6"
+F 7 "Unavailable" H 8150 3800 50  0001 L BNN "Pole7"
+	1    8100 3900
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R1
+U 1 1 5D78EB6F
+P 6550 3850
+F 0 "R1" H 6480 3804 50  0000 R CNN
+F 1 "R" H 6480 3895 50  0000 R CNN
+F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal" V 6480 3850 50  0001 C CNN
+F 3 "~" H 6550 3850 50  0001 C CNN
+	1    6550 3850
+	0    -1   -1   0   
+$EndComp
+$Comp
+L power:GND #PWR05
+U 1 1 5D79E47E
+P 7000 3650
+F 0 "#PWR05" H 7000 3400 50  0001 C CNN
+F 1 "GND" H 7005 3477 50  0000 C CNN
+F 2 "" H 7000 3650 50  0001 C CNN
+F 3 "" H 7000 3650 50  0001 C CNN
+	1    7000 3650
+	-1   0    0    1   
+$EndComp
+$Comp
+L Connector:Screw_Terminal_01x02 J2
+U 1 1 5D7800CD
+P 9600 3850
+F 0 "J2" H 9680 3842 50  0000 L CNN
+F 1 "Screw_Terminal_01x02" H 9680 3751 50  0000 L CNN
+F 2 "TerminalBlock:TerminalBlock_bornier-2_P5.08mm" H 9600 3850 50  0001 C CNN
+F 3 "~" H 9600 3850 50  0001 C CNN
+	1    9600 3850
+	1    0    0    1   
+$EndComp
+$Comp
+L Converter_ACDC:HLK-PM01 PS1
+U 1 1 5D799008
+P 5950 7250
+F 0 "PS1" H 5950 7575 50  0000 C CNN
+F 1 "HLK-PM01" H 5950 7484 50  0000 C CNN
+F 2 "Converter_ACDC:Converter_ACDC_HiLink_HLK-PMxx" H 5950 6950 50  0001 C CNN
+F 3 "http://www.hlktech.net/product_detail.php?ProId=54" H 6350 6900 50  0001 C CNN
+	1    5950 7250
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR04
+U 1 1 5D79A06D
+P 6350 7350
+F 0 "#PWR04" H 6350 7100 50  0001 C CNN
+F 1 "GND" V 6355 7222 50  0000 R CNN
+F 2 "" H 6350 7350 50  0001 C CNN
+F 3 "" H 6350 7350 50  0001 C CNN
+	1    6350 7350
+	0    -1   -1   0   
+$EndComp
+Text GLabel 6350 7150 2    50   Output ~ 0
++5V
+Text GLabel 7700 3600 1    50   Input ~ 0
++5V
+$Comp
+L Connector:Screw_Terminal_01x02 J1
+U 1 1 5D79BB9B
+P 5200 7200
+F 0 "J1" H 5280 7192 50  0000 L CNN
+F 1 "Screw_Terminal_01x02" H 5280 7101 50  0000 L CNN
+F 2 "TerminalBlock:TerminalBlock_bornier-2_P5.08mm" H 5200 7200 50  0001 C CNN
+F 3 "~" H 5200 7200 50  0001 C CNN
+	1    5200 7200
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5550 7150 5550 7100
+Wire Wire Line
+	5550 7100 5400 7100
+Wire Wire Line
+	5000 7100 5000 7200
+Wire Wire Line
+	5000 7300 5000 7400
+Wire Wire Line
+	5000 7400 5400 7400
+Wire Wire Line
+	5550 7400 5550 7350
+$Comp
+L MCU_Module:WeMos_D1_mini U3
+U 1 1 5D7AB01F
+P 1700 3600
+F 0 "U3" H 1700 2711 50  0000 C CNN
+F 1 "WeMos_D1_mini" H 1700 2620 50  0000 C CNN
+F 2 "Module:WEMOS_D1_mini_light" H 1700 2450 50  0001 C CNN
+F 3 "https://wiki.wemos.cc/products:d1:d1_mini#documentation" H -150 2450 50  0001 C CNN
+	1    1700 3600
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR02
+U 1 1 5D7ABC56
+P 1700 4400
+F 0 "#PWR02" H 1700 4150 50  0001 C CNN
+F 1 "GND" H 1705 4227 50  0000 C CNN
+F 2 "" H 1700 4400 50  0001 C CNN
+F 3 "" H 1700 4400 50  0001 C CNN
+	1    1700 4400
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7000 4050 7450 4050
+Wire Wire Line
+	7450 4050 7450 3600
+Wire Wire Line
+	7450 3600 7550 3600
+Wire Wire Line
+	8750 3600 9350 3600
+Wire Wire Line
+	9350 3600 9350 3850
+Wire Wire Line
+	9350 3850 9400 3850
+Wire Wire Line
+	8400 3600 8400 3550
+Wire Wire Line
+	8400 3550 9400 3550
+Wire Wire Line
+	9400 3550 9400 3750
+$Comp
+L Transistor_BJT:BC547 Q2
+U 1 1 5D7B775F
+P 6900 3050
+F 0 "Q2" H 7091 3096 50  0000 L CNN
+F 1 "BC547" H 7091 3005 50  0000 L CNN
+F 2 "Package_TO_SOT_THT:TO-92_Inline" H 7100 2975 50  0001 L CIN
+F 3 "http://www.fairchildsemi.com/ds/BC/BC547.pdf" H 6900 3050 50  0001 L CNN
+	1    6900 3050
+	1    0    0    -1  
+$EndComp
+$Comp
+L G3MB-202P:G3MB-202P K2
+U 1 1 5D7B7769
+P 8100 3100
+F 0 "K2" H 8830 3203 50  0000 L CNN
+F 1 "G3MB-202P" H 8830 3112 50  0000 L CNN
+F 2 "G3MB-202P:RELAY_G3MB-202P" H 8150 3000 50  0001 L BNN
+F 3 "G3MB-202P" H 8150 3000 50  0001 L BNN
+F 4 "Omron Automation" H 8150 3000 50  0001 L BNN "Pole4"
+F 5 "SIP-4 Omron Automation" H 8150 3000 50  0001 L BNN "Pole5"
+F 6 "None" H 8150 3000 50  0001 L BNN "Pole6"
+F 7 "Unavailable" H 8150 3000 50  0001 L BNN "Pole7"
+	1    8100 3100
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R2
+U 1 1 5D7B776F
+P 6550 3050
+F 0 "R2" H 6480 3004 50  0000 R CNN
+F 1 "R" H 6480 3095 50  0000 R CNN
+F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal" V 6480 3050 50  0001 C CNN
+F 3 "~" H 6550 3050 50  0001 C CNN
+	1    6550 3050
+	0    -1   -1   0   
+$EndComp
+$Comp
+L power:GND #PWR06
+U 1 1 5D7B7775
+P 7000 2850
+F 0 "#PWR06" H 7000 2600 50  0001 C CNN
+F 1 "GND" H 7005 2677 50  0000 C CNN
+F 2 "" H 7000 2850 50  0001 C CNN
+F 3 "" H 7000 2850 50  0001 C CNN
+	1    7000 2850
+	-1   0    0    1   
+$EndComp
+$Comp
+L Connector:Screw_Terminal_01x02 J3
+U 1 1 5D7B777B
+P 9600 3050
+F 0 "J3" H 9680 3042 50  0000 L CNN
+F 1 "Screw_Terminal_01x02" H 9680 2951 50  0000 L CNN
+F 2 "TerminalBlock:TerminalBlock_bornier-2_P5.08mm" H 9600 3050 50  0001 C CNN
+F 3 "~" H 9600 3050 50  0001 C CNN
+	1    9600 3050
+	1    0    0    1   
+$EndComp
+Text GLabel 7700 2800 1    50   Input ~ 0
++5V
+Wire Wire Line
+	7000 3250 7450 3250
+Wire Wire Line
+	7450 3250 7450 2800
+Wire Wire Line
+	7450 2800 7550 2800
+Wire Wire Line
+	8750 2800 9350 2800
+Wire Wire Line
+	9350 2800 9350 3050
+Wire Wire Line
+	9350 3050 9400 3050
+Wire Wire Line
+	8400 2800 8400 2750
+Wire Wire Line
+	8400 2750 9400 2750
+Wire Wire Line
+	9400 2750 9400 2950
+Wire Wire Line
+	5700 3300 5700 3050
+Wire Wire Line
+	5700 3850 6400 3850
+Wire Wire Line
+	5700 3400 5700 3850
+Wire Wire Line
+	5700 3050 6400 3050
+Wire Wire Line
+	5550 3700 5550 4650
+$Comp
+L power:GND #PWR03
+U 1 1 5D7D4CFA
+P 2300 850
+F 0 "#PWR03" H 2300 600 50  0001 C CNN
+F 1 "GND" V 2305 722 50  0000 R CNN
+F 2 "" H 2300 850 50  0001 C CNN
+F 3 "" H 2300 850 50  0001 C CNN
+	1    2300 850 
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	2100 3300 5700 3300
+Wire Wire Line
+	2100 3400 5700 3400
+Wire Wire Line
+	2100 3700 5550 3700
+Wire Wire Line
+	2100 3800 5450 3800
+NoConn ~ 1800 2800
+NoConn ~ 1300 3200
+NoConn ~ 2100 3100
+NoConn ~ 2100 3200
+Wire Wire Line
+	1050 1150 1100 1150
+Wire Wire Line
+	5450 3800 5450 5450
+$Comp
+L G3MB-202P:G3MB-202P K3
+U 1 1 5D7BC110
+P 8100 4700
+F 0 "K3" H 8830 4803 50  0000 L CNN
+F 1 "G3MB-202P" H 8830 4712 50  0000 L CNN
+F 2 "G3MB-202P:RELAY_G3MB-202P" H 8150 4600 50  0001 L BNN
+F 3 "G3MB-202P" H 8150 4600 50  0001 L BNN
+F 4 "Omron Automation" H 8150 4600 50  0001 L BNN "Pole4"
+F 5 "SIP-4 Omron Automation" H 8150 4600 50  0001 L BNN "Pole5"
+F 6 "None" H 8150 4600 50  0001 L BNN "Pole6"
+F 7 "Unavailable" H 8150 4600 50  0001 L BNN "Pole7"
+	1    8100 4700
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5550 4650 6400 4650
+Wire Wire Line
+	9400 4350 9400 4550
+Wire Wire Line
+	8400 4350 9400 4350
+Wire Wire Line
+	8400 4400 8400 4350
+Wire Wire Line
+	9350 4650 9400 4650
+Wire Wire Line
+	9350 4400 9350 4650
+Wire Wire Line
+	8750 4400 9350 4400
+Wire Wire Line
+	7450 4400 7550 4400
+Wire Wire Line
+	7450 4850 7450 4400
+Wire Wire Line
+	7000 4850 7450 4850
+Text GLabel 7700 4400 1    50   Input ~ 0
++5V
+$Comp
+L Connector:Screw_Terminal_01x02 J4
+U 1 1 5D7BC122
+P 9600 4650
+F 0 "J4" H 9680 4642 50  0000 L CNN
+F 1 "Screw_Terminal_01x02" H 9680 4551 50  0000 L CNN
+F 2 "TerminalBlock:TerminalBlock_bornier-2_P5.08mm" H 9600 4650 50  0001 C CNN
+F 3 "~" H 9600 4650 50  0001 C CNN
+	1    9600 4650
+	1    0    0    1   
+$EndComp
+$Comp
+L power:GND #PWR07
+U 1 1 5D7BC11C
+P 7000 4450
+F 0 "#PWR07" H 7000 4200 50  0001 C CNN
+F 1 "GND" H 7005 4277 50  0000 C CNN
+F 2 "" H 7000 4450 50  0001 C CNN
+F 3 "" H 7000 4450 50  0001 C CNN
+	1    7000 4450
+	-1   0    0    1   
+$EndComp
+$Comp
+L Device:R R3
+U 1 1 5D7BC116
+P 6550 4650
+F 0 "R3" H 6480 4604 50  0000 R CNN
+F 1 "R" H 6480 4695 50  0000 R CNN
+F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal" V 6480 4650 50  0001 C CNN
+F 3 "~" H 6550 4650 50  0001 C CNN
+	1    6550 4650
+	0    -1   -1   0   
+$EndComp
+$Comp
+L Transistor_BJT:BC547 Q3
+U 1 1 5D7BC106
+P 6900 4650
+F 0 "Q3" H 7091 4696 50  0000 L CNN
+F 1 "BC547" H 7091 4605 50  0000 L CNN
+F 2 "Package_TO_SOT_THT:TO-92_Inline" H 7100 4575 50  0001 L CIN
+F 3 "http://www.fairchildsemi.com/ds/BC/BC547.pdf" H 6900 4650 50  0001 L CNN
+	1    6900 4650
+	1    0    0    -1  
+$EndComp
+$Comp
+L Transistor_BJT:BC547 Q4
+U 1 1 5D7BF42D
+P 6900 5450
+F 0 "Q4" H 7091 5496 50  0000 L CNN
+F 1 "BC547" H 7091 5405 50  0000 L CNN
+F 2 "Package_TO_SOT_THT:TO-92_Inline" H 7100 5375 50  0001 L CIN
+F 3 "http://www.fairchildsemi.com/ds/BC/BC547.pdf" H 6900 5450 50  0001 L CNN
+	1    6900 5450
+	1    0    0    -1  
+$EndComp
+$Comp
+L G3MB-202P:G3MB-202P K4
+U 1 1 5D7BF437
+P 8100 5500
+F 0 "K4" H 8830 5603 50  0000 L CNN
+F 1 "G3MB-202P" H 8830 5512 50  0000 L CNN
+F 2 "G3MB-202P:RELAY_G3MB-202P" H 8150 5400 50  0001 L BNN
+F 3 "G3MB-202P" H 8150 5400 50  0001 L BNN
+F 4 "Omron Automation" H 8150 5400 50  0001 L BNN "Pole4"
+F 5 "SIP-4 Omron Automation" H 8150 5400 50  0001 L BNN "Pole5"
+F 6 "None" H 8150 5400 50  0001 L BNN "Pole6"
+F 7 "Unavailable" H 8150 5400 50  0001 L BNN "Pole7"
+	1    8100 5500
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R4
+U 1 1 5D7BF43D
+P 6550 5450
+F 0 "R4" H 6480 5404 50  0000 R CNN
+F 1 "R" H 6480 5495 50  0000 R CNN
+F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal" V 6480 5450 50  0001 C CNN
+F 3 "~" H 6550 5450 50  0001 C CNN
+	1    6550 5450
+	0    -1   -1   0   
+$EndComp
+$Comp
+L power:GND #PWR08
+U 1 1 5D7BF443
+P 7000 5250
+F 0 "#PWR08" H 7000 5000 50  0001 C CNN
+F 1 "GND" H 7005 5077 50  0000 C CNN
+F 2 "" H 7000 5250 50  0001 C CNN
+F 3 "" H 7000 5250 50  0001 C CNN
+	1    7000 5250
+	-1   0    0    1   
+$EndComp
+$Comp
+L Connector:Screw_Terminal_01x02 J5
+U 1 1 5D7BF449
+P 9600 5450
+F 0 "J5" H 9680 5442 50  0000 L CNN
+F 1 "Screw_Terminal_01x02" H 9680 5351 50  0000 L CNN
+F 2 "TerminalBlock:TerminalBlock_bornier-2_P5.08mm" H 9600 5450 50  0001 C CNN
+F 3 "~" H 9600 5450 50  0001 C CNN
+	1    9600 5450
+	1    0    0    1   
+$EndComp
+Text GLabel 7700 5200 1    50   Input ~ 0
++5V
+Wire Wire Line
+	7000 5650 7450 5650
+Wire Wire Line
+	7450 5650 7450 5200
+Wire Wire Line
+	7450 5200 7550 5200
+Wire Wire Line
+	8750 5200 9350 5200
+Wire Wire Line
+	9350 5200 9350 5450
+Wire Wire Line
+	9350 5450 9400 5450
+Wire Wire Line
+	8400 5200 8400 5150
+Wire Wire Line
+	8400 5150 9400 5150
+Wire Wire Line
+	9400 5150 9400 5350
+Wire Wire Line
+	5450 5450 6400 5450
+$Comp
+L Connector:Screw_Terminal_01x02 J8
+U 1 1 5D8FD2D4
+P 3750 5600
+F 0 "J8" H 3830 5592 50  0000 L CNN
+F 1 "Screw_Terminal_01x02" H 3830 5501 50  0000 L CNN
+F 2 "TerminalBlock:TerminalBlock_bornier-2_P5.08mm" H 3750 5600 50  0001 C CNN
+F 3 "~" H 3750 5600 50  0001 C CNN
+	1    3750 5600
+	1    0    0    -1  
+$EndComp
+$Comp
+L Connector:Screw_Terminal_01x02 J9
+U 1 1 5D8FDC67
+P 3750 5850
+F 0 "J9" H 3830 5842 50  0000 L CNN
+F 1 "Screw_Terminal_01x02" H 3830 5751 50  0000 L CNN
+F 2 "TerminalBlock:TerminalBlock_bornier-2_P5.08mm" H 3750 5850 50  0001 C CNN
+F 3 "~" H 3750 5850 50  0001 C CNN
+	1    3750 5850
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2100 4000 2100 5850
+Wire Wire Line
+	2100 5850 3550 5850
+Wire Wire Line
+	2100 3900 2200 3900
+Wire Wire Line
+	2200 3900 2200 5600
+Wire Wire Line
+	2200 5600 3550 5600
+Wire Wire Line
+	2100 3600 2300 3600
+Wire Wire Line
+	2300 3600 2300 5300
+Wire Wire Line
+	2300 5300 3550 5300
+Wire Wire Line
+	2100 3500 2400 3500
+Wire Wire Line
+	2400 3500 2400 5000
+Wire Wire Line
+	2400 5000 3550 5000
+$Comp
+L Connector:Screw_Terminal_01x02 J6
+U 1 1 5D8FBBC7
+P 3750 5000
+F 0 "J6" H 3830 4992 50  0000 L CNN
+F 1 "Screw_Terminal_01x02" H 3830 4901 50  0000 L CNN
+F 2 "TerminalBlock:TerminalBlock_bornier-2_P5.08mm" H 3750 5000 50  0001 C CNN
+F 3 "~" H 3750 5000 50  0001 C CNN
+	1    3750 5000
+	1    0    0    -1  
+$EndComp
+$Comp
+L Connector:Screw_Terminal_01x02 J7
+U 1 1 5D8FC540
+P 3750 5300
+F 0 "J7" H 3830 5292 50  0000 L CNN
+F 1 "Screw_Terminal_01x02" H 3830 5201 50  0000 L CNN
+F 2 "TerminalBlock:TerminalBlock_bornier-2_P5.08mm" H 3750 5300 50  0001 C CNN
+F 3 "~" H 3750 5300 50  0001 C CNN
+	1    3750 5300
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR0101
+U 1 1 5D9433C9
+P 3550 5100
+F 0 "#PWR0101" H 3550 4850 50  0001 C CNN
+F 1 "GND" V 3555 4972 50  0000 R CNN
+F 2 "" H 3550 5100 50  0001 C CNN
+F 3 "" H 3550 5100 50  0001 C CNN
+	1    3550 5100
+	0    1    1    0   
+$EndComp
+$Comp
+L power:GND #PWR0102
+U 1 1 5D943C29
+P 3550 5400
+F 0 "#PWR0102" H 3550 5150 50  0001 C CNN
+F 1 "GND" V 3555 5272 50  0000 R CNN
+F 2 "" H 3550 5400 50  0001 C CNN
+F 3 "" H 3550 5400 50  0001 C CNN
+	1    3550 5400
+	0    1    1    0   
+$EndComp
+$Comp
+L power:GND #PWR0103
+U 1 1 5D944440
+P 3550 5700
+F 0 "#PWR0103" H 3550 5450 50  0001 C CNN
+F 1 "GND" V 3555 5572 50  0000 R CNN
+F 2 "" H 3550 5700 50  0001 C CNN
+F 3 "" H 3550 5700 50  0001 C CNN
+	1    3550 5700
+	0    1    1    0   
+$EndComp
+$Comp
+L power:GND #PWR0104
+U 1 1 5D944999
+P 3550 5950
+F 0 "#PWR0104" H 3550 5700 50  0001 C CNN
+F 1 "GND" V 3555 5822 50  0000 R CNN
+F 2 "" H 3550 5950 50  0001 C CNN
+F 3 "" H 3550 5950 50  0001 C CNN
+	1    3550 5950
+	0    1    1    0   
+$EndComp
+$Comp
+L power:PWR_FLAG #FLG0101
+U 1 1 5D9467B7
+P 5400 7100
+F 0 "#FLG0101" H 5400 7175 50  0001 C CNN
+F 1 "PWR_FLAG" H 5400 7273 50  0000 C CNN
+F 2 "" H 5400 7100 50  0001 C CNN
+F 3 "~" H 5400 7100 50  0001 C CNN
+	1    5400 7100
+	1    0    0    -1  
+$EndComp
+Connection ~ 5400 7100
+Wire Wire Line
+	5400 7100 5000 7100
+$Comp
+L power:PWR_FLAG #FLG0102
+U 1 1 5D947E1B
+P 5400 7400
+F 0 "#FLG0102" H 5400 7475 50  0001 C CNN
+F 1 "PWR_FLAG" H 5400 7573 50  0000 C CNN
+F 2 "" H 5400 7400 50  0001 C CNN
+F 3 "~" H 5400 7400 50  0001 C CNN
+	1    5400 7400
+	-1   0    0    1   
+$EndComp
+Connection ~ 5400 7400
+Wire Wire Line
+	5400 7400 5550 7400
+$Comp
+L SHT31-DIS-B:SHT3x-HAT U2
+U 1 1 5D962A9F
+P 1700 1050
+F 0 "U2" H 1700 1517 50  0000 C CNN
+F 1 "SHT3x-HAT" H 1700 1426 50  0000 C CNN
+F 2 "Connector_PinSocket_2.54mm:PinSocket_1x04_P2.54mm_Horizontal" H 1700 1050 50  0001 L BNN
+F 3 "Sensirion AG" H 1700 1050 50  0001 L BNN
+F 4 "TDFN-8 Sensirion" H 1700 1050 50  0001 L BNN "Pole4"
+F 5 "None" H 1700 1050 50  0001 L BNN "Pole5"
+F 6 "SHT31-DIS-B" H 1700 1050 50  0001 L BNN "Pole6"
+F 7 "SHT31 Series 5.5 V 800 µA Surface Mount Humidity and Temperature Sensor" H 1700 1050 50  0001 L BNN "Pole7"
+F 8 "Unavailable" H 1700 1050 50  0001 L BNN "Pole8"
+	1    1700 1050
+	1    0    0    -1  
+$EndComp
+Text GLabel 2300 1250 2    50   Input ~ 0
++5V
+Wire Wire Line
+	1100 3600 1300 3600
+Wire Wire Line
+	1100 1250 1100 3600
+Wire Wire Line
+	1300 3500 1050 3500
+Wire Wire Line
+	1050 3500 1050 1150
+Text GLabel 1600 2800 1    50   Input ~ 0
++5V
+$EndSCHEMATC
